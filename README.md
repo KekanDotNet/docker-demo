@@ -20,7 +20,7 @@ It is part of the Webinar session conducted for the same topic.
 ## Build & push docker image to docker hub
 ```
 docker build -t kekandotnet/pyserver:0.1 .
-docker push kekandotnet/pyserver:0.
+docker push kekandotnet/pyserver:0.1
 ```
 
 ## Add new tag to existing image
@@ -51,7 +51,7 @@ docker pull kekandotnet/docker-demo:0.1
 
 ## Run docker
 ```
-docker run -d -p 8080:80 kekandotnet/docker-demo:0.1
+docker run -d --name docker-demo -p 8080:80 kekandotnet/docker-demo:0.1
 ```
 
 ## Check running dockers
@@ -60,14 +60,39 @@ docker ps
 docker ps -a
 ```
 
+## Display docker logs
+```
+docker logs docker-demo
+```
+
 ## Stop and remove docker container
 ```
-docker stop kekandotnet/docker-demo:0.1
-docker rm kekandotnet/docker-demo:0.1
+docker stop docker-demo
+docker rm docker-demo
 ```
 OR
 ```
-docker rm -f kekandotnet/docker-demo:0.1
+docker rm -f docker-demo
+```
+
+## Start an already stopped docker container
+```
+docker start docker-demo
+```
+
+## List all docker network on the host
+```
+docker network ls
+```
+
+## Check docker network details
+```
+docker network inspect host
+```
+
+## Exec OR login to a running container
+```
+docker exec -it docker-demo sh
 ```
 
 ## License
