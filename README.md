@@ -19,13 +19,13 @@ It is part of the Webinar session conducted for the same topic.
 
 ## Build & push docker image to docker hub
 ```
-docker build -t kekandotnet/pyserver:0.1 .
-docker push kekandotnet/pyserver:0.1
+docker build -t kekandotnet/docker-demo:0.1 .
+docker push kekandotnet/docker-demo:0.1
 ```
 
 ## Add new tag to existing image
 ```
-docker tag kekandotnet/pyserver:0.1 kekandotnet/docker-demo:0.1
+docker tag kekandotnet/docker-demo:0.1 kekandotnet/docker-demo-1:0.1
 ```
 OR
 ```
@@ -38,11 +38,11 @@ docker images
 ```
 ## Remove local image
 ```
-docker rmi kekandotnet/pyserver:0.1
+docker rmi kekandotnet/docker-demo:0.1
 ```
 OR
 ```
-docker rmi -f kekandotnet/pyserver:0.1
+docker rmi -f kekandotnet/docker-demo:0.1
 ```
 ## Download image from docker registry
 ```
@@ -51,7 +51,7 @@ docker pull kekandotnet/docker-demo:0.1
 
 ## Run docker
 ```
-docker run -d --name docker-demo -p 8080:80 kekandotnet/docker-demo:0.1
+docker run -d --name docker-demo -p 80:8080 kekandotnet/docker-demo:0.1
 ```
 
 ## Check running dockers

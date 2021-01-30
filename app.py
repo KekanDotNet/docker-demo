@@ -13,12 +13,11 @@ import flask
 from flask import request, jsonify
 
 
+app = flask.Flask(__name__)
+
 @app.route("/")
 def hello_world():
-    return "Hello, world!"
+    return "Hello, PICT!"
 
-
-if __name__ == "__main__":
-    print("Welcome to docker demo!")
-    app = flask.Flask(__name__)
-    app.run(host='0.0.0.0', port=8080)
+print("Welcome to docker demo!")
+app.run(host='0.0.0.0', port=8080)
