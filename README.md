@@ -1,9 +1,7 @@
 # docker-demo
-Topic: Containers, Docker and Cloud Computing Demonstration
+*Topic*: Containers, Docker and Cloud Computing Demonstration.
 
-This repository hosts sample python server code and tooling to demonstrated Docker containers and it's working
-
-It is part of the Webinar session conducted for the same topic.
+This repository hosts sample python server code and tooling to demonstrated Docker containers and it's working. It is part of the Webinar session conducted for the same topic.
 
 ## Pre-requisite
 - Docker installed on your machine.
